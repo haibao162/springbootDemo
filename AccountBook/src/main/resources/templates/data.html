@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+<title>Dashboard, Free HTML5 Admin Template</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width" />
+<link rel="stylesheet" href="css/templatemo_main.css" />
+<style type="text/css">
+td {
+	padding: 10px;
+}
+</style>
+
+</head>
+<body>
+	<div class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<div class="logo">
+				<h1>Dashboard - Admin Template</h1>
+			</div>
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+		</div>
+	</div>
+	<div class="template-page-wrapper">
+		<div class="navbar-collapse collapse templatemo-sidebar">
+			<ul class="templatemo-sidebar-menu">
+
+				<li><a href="index"><i class="fa fa-home"></i>首页</a></li>
+				<li class="active"><a href="data"><i class="fa fa-database"></i>数据</a></li>
+				<li><a href="project"><i class="fa fa-cubes"></i>项目</a></li>
+				<li><a href="user"><i class="fa fa-users"></i>用户</a></li>
+				<li><a href="#"><i class="fa fa-cog"></i>设置</a></li>
+				<li><a href="#"><i class="fa fa-sign-out"></i>登出</a></li>
+			</ul>
+		</div>
+		<!--/.navbar-collapse -->
+
+		<div class="templatemo-content-wrapper">
+			<div class="templatemo-content">
+				<ol class="breadcrumb">
+					<li>Admin Panel</li>
+					<li>数据</li>
+				</ol>
+
+
+				<div class="row">
+					<div class="col-md-12">
+						<h4>添加数据：</h4>
+					</div>
+					<form role="form">
+						<div class="col-md-3 col-md-offset-1">
+							<table id="user">
+								<tr>
+									<td><input type="text" disabled="disabled"
+										class="form-control" value="123" /></td>
+									<td><input type="number" class="form-control" value="0" /></td>
+								</tr>
+								<tr>
+									<td><input type="text" disabled="disabled"
+										class="form-control" value="123" /></td>
+									<td><input type="number" class="form-control" value="0" /></td>
+								</tr>
+							</table>
+						</div>
+						<div class="col-md-3 col-md-offset-1">
+							<table id="user">
+								<tr>
+									<td><input type="text" disabled="disabled"
+										class="form-control" value="123" /></td>
+									<td><input type="number" class="form-control" value="0" /></td>
+								</tr>
+								<tr>
+									<td><input type="text" disabled="disabled"
+										class="form-control" value="123" /></td>
+									<td><input type="number" class="form-control" value="0" /></td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="col-md-12">
+							<h4>添加收入：</h4>
+						</div>
+						<div class="col-md-5 col-md-offset-1">
+							<table id="datain">
+								<tr>
+									<td><select class="form-control addDateUser"
+										id="addDateUser1">
+											<option value="0">请选择用户</option>
+									</select></td>
+									<td><input type="text" class="form-control"
+										id="addDateName1" value="charge" /></td>
+									<td><input type="number" class="form-control"
+										id="addDateNum1" value="0" /></td>
+								</tr>
+							</table>
+							<input type="number" class="form-control"  style="display:none"  id="addNum" value="1" />
+						</div>
+					</form>
+					<div class="col-md-11 col-md-offset-1">
+						<button id="addRow" style="margin: 10px;" class="btn btn-default">[
+							+ ] 添加一行</button>
+					</div>
+					<div class="col-md-11 col-md-offset-1">
+						<button type="submit" style="margin: 10px;"
+							class="btn btn-success">提交</button>
+					</div>
+
+				</div>
+
+
+			</div>
+		</div>
+
+		<footer class="templatemo-footer">
+			<div class="templatemo-copyright">
+				<p>Copyright &copy; 2084 Your Company Name</p>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/templatemo_script.js"></script>
+	<script type="text/javascript">
+		$("#addRow")
+				.click(
+						function() {
+							var num = $(".addDateUser").length;
+							$("#datain")
+									.append(
+											'<tr><td><select class="form-control  addDateUser" id="addDateUser'
+													+ (num + 1)
+													+ '"><option value="0">请选择用户</option></select></td><td><input type="text" class="form-control" id="addDateName'
+													+ (num + 1)
+													+ '" value="123" /></td><td><input type="number" class="form-control"  id="addDateNum'
+													+ (num + 1)
+													+ '" value="123" /></td></tr>');
+							$("#addNum").val(num + 1);
+						});
+	</script>
+</body>
+</html>
